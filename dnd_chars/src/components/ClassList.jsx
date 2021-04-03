@@ -1,16 +1,45 @@
 import axios from 'axios';
-import react from 'react';
+import react, {useState} from 'react';
 
 
 export default function ClassList(props){
-console.log(props)
-const list = props.data.classes;
-// const actualList = list.map(clase => <li id={clase.id}> {clase.name} </li >);
+// console.log(props)
+
+let  list =[];
+const x = 0;
+const [data, setData] =  useState({ 
+
+    classes : [
+      {name : 'rogue',
+        id : 'rg'},
+        {name : 'barbarian',
+        id : 'barb'},
+        {name : 'warlock',
+        id : 'lock'},
+    ]
+  },[x]);
+
+
+axios.get('https://www.dnd5eapi.co/api/classes')
+.then(function (res) {
+    list = res.data;
+    console.log('list ===>', list);
+ 		setData({... data, classes : list.results})
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+
+
+// console.log('DATA ===>', list);
+const actualList = data.classes.map(clase => <li key={clase.index}> {clase.name} </li >);
+
+
 
 return (
 
-        <ul>
-        	{list.map(clase => <li id={clase.id}> {clase.name} </li >)}
+        <ul id = 'classList'>
+        	{actualList}
         </ul>
  				
  				)
