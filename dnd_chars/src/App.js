@@ -1,23 +1,31 @@
 import logo from './logo.svg';
-import axios from 'axios'
+import axios from 'axios';
+import { useState }  from 'react';
 import './App.css';
+import ClassList  from './components/ClassList';
 
 function App() {
+
+  const [data, setData] =  useState({ 
+    classes : [
+      {name : 'rogue',
+        id : 'rg'},
+        {name : 'barbarian',
+        id : 'barb'},
+        {name : 'warlock',
+        id : 'lock'},
+    ]
+  });
+
+  console.log('from app.js====>', data)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
           Rockandroll yo
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ClassList data = {data}/>
       </header>
     </div>
   );
