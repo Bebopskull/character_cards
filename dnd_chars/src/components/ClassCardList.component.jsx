@@ -33,7 +33,7 @@ axios.get('https://www.dnd5eapi.co/api/classes')
 
 
 // console.log('DATA ===>', list);
-const actualList = data.classes.map(clase => <div className = 'class-cards' key={clase.index}> {clase.name} </div>);
+const actualList = data.classes.map(clase => <div className = 'class-card' key={clase.index}> {clase.name} </div>);
 
 
 

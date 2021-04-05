@@ -11,6 +11,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 98vw;
-	flex-flow: row;
+	flex-flow: wrap;
 	justify-content: space-around;
+}
+
+.class-card{
+
+	width: 300px;
+	height: 350px;
+
 }
