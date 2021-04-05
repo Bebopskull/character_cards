@@ -1,7 +1,7 @@
 import axios from 'axios';
 import react, {useState} from 'react';
 import './ClassCardList.style.css';
-
+import ClassCard from './classCards/classCard.component'
 
 export default function ClassList(props){
 // console.log(props)
@@ -33,7 +33,11 @@ axios.get('https://www.dnd5eapi.co/api/classes')
 
 
 // console.log('DATA ===>', list);
-const actualList = data.classes.map(clase => <div className = 'class-card' key={clase.index}> {clase.name} </div>);
+const actualList = data.classes.map(clase => <ClassCard 
+                                    className = 'class-card' 
+                                    key={clase.index}
+                                    name={clase.name}
+                                    /> );
 
 
 
