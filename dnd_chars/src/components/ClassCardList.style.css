@@ -1,0 +1,16 @@
+.class-list{
+	width: 98vw;
+	hyphens:98vh;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.class-card-list{
+
+	display: flex;
+	flex-wrap: wrap;
+	width: 98vw;
+	flex-flow: row;
+	justify-content: space-around;
+}

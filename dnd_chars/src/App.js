@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import axios from 'axios';
 import React, { useState }  from 'react';
 import './App.css';
-import ClassList  from './components/ClassList';
+import ClassList  from './components/ClassCardList.component.jsx';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         <p>
           Rockandroll yo
         </p>
-        <ClassList/>
+        <ClassList className = 'class-list'/>
       </header>
     </div>
   );
