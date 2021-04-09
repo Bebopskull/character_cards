@@ -1,3 +1,8 @@
+img{
+	mix-blend-mode: darken;
+	/*mix-blend-mode: color-dodge;*/
+}
+
 .class-list{
 	width: 98vw;
 	hyphens:98vh;
@@ -24,9 +29,23 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #FF770099;
-	border-radius: 10%;
-	
-	margin-bottom: 20px;
 
+	border-radius: 10%;
+
+	margin-bottom: 20px;
+	
+  background-color: #95dada;
+  border: 1px solid grey;
+  
+  padding: 10px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+
+}
+
+.class-card:hover{
+	transform: scale(1.05);
 }

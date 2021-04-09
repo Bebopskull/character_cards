@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         
         <p>
-          Rockandroll yo
+          D&D Classes
         </p>
         <ClassList className = 'class-list'/>
       </header>
