@@ -14,13 +14,14 @@ import Wizard from "../../media/DnDFanSiteKit/Class Symbols/DnD5E_ClassSymb_Wiza
 
 export default function ClassCard(props){
 
-	console.log('ClassCard props===>', props)
+	
+	const classesObj={Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Wizard, Warlock};
 
-
+	console.log('Obj ===>', classesObj) 
 	return (
 	<div className = 'class-card'  >
 
-	  <img src={props.name} alt="" width='100px' height='100px' />
+	  <img src={classesObj[props.name]} alt="" width='35%' height='35%' />
 	 	<div>
 	 			{props.name} 
 	 	</div>
