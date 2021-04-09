@@ -6,48 +6,20 @@ import ClassCard from './classCards/classCard.component'
 export default function ClassList(props){
 // console.log(props)
 
-let  list =[];
-let x;
+// console.log('this is data.classes',props.data.classes)
+// const filteredClasses = props.data.classes.filter(clase => {
+// 	clase.name.toLowerCase().includes(props.search)
+// });
 
-
-const [data, setData] =  useState({ 
-
-    classes : [
-      
-    ]
-  });
-	
-
-useEffect(() =>{
-    axios.get('https://www.dnd5eapi.co/api/classes')
-		.then(function (res) {
-		    list = res.data;
-		    console.log('list ===>', list);
-		 		setData({... data, classes : list.results})
-		  })
-		  .catch(function (error) {
-		    console.log(error);
-		  })
-
-
-}, [ ])
-	
-	
+		// console.log('DATA ===>', list);
 
 
 
-
-
-
-// console.log('DATA ===>', list);
-const actualList = data.classes.map(clase => <ClassCard 
-                                    className = 'class-card' 
-                                    key={clase.index}
-                                    name={clase.name}
-                                    /> );
-
-
-
+		let actualList = props.data.classes.map(clase => <ClassCard 
+		                                    className = 'class-card' 
+		                                    key={clase.index}
+		                                    name={clase.name}
+		                                    /> );
 return (
 
         <div className = 'class-card-list' id = 'class-card-list'>

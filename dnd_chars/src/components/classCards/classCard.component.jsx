@@ -17,7 +17,7 @@ export default function ClassCard(props){
 	
 	const classesObj={Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Wizard, Warlock};
 
-	console.log('Obj ===>', classesObj) 
+
 	return (
 	<div className = 'class-card'  >
 
