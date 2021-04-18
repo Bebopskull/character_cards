@@ -30,19 +30,22 @@ useEffect(() =>{
       })
 }, [ ])
 
-let filteredClasses = [...data.classes];
-  // console.log('Before FILTER===>',filteredClasses)
+// let filteredClasses = [...data.classes];
+// console.log('Before FILTER===>',filteredClasses)
 
+let filteredClasses;
 
 const handleFilterInput = (e) =>{
-  console.log(search.searchField)
   setSearch({searchField : e.target.value})
-  
-  filteredClasses = data.classes.filter(i => {
-    i.name.toLowerCase().includes(search.searchField.toLowerCase())
-  });
-  console.log('AFTER FILTER===>', filteredClasses)
+  // console.log(search.searchField)
+  // console.log(data.classes.filter(i => {i.name.includes(search.searchField)}));
 
+ return data.classes.filter(i => {
+    console.log('the name',i.name.includes(search.searchField))
+    i.name.includes(search.searchField)
+  });
+  // console.log('AFTER FILTER===>', filteredClasses)
+  // return filteredClasses;
 }  
 
 
